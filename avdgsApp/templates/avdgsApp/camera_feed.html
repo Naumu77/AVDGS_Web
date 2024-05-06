@@ -1,0 +1,22 @@
+<!-- camera_feed.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Feed</title>
+</head>
+<body>
+    <h1>Camera Feed</h1>
+    <div>
+        <img id="camera-feed" src="" alt="Camera Feed">
+    </div>
+    <script>
+        // JavaScript to continuously update the camera feed
+        setInterval(function(){
+            document.getElementById('camera-feed').src = "{% url 'camera_feed' %}";
+        }, 1000); // Update every 1 second (adjust as needed)
+    </script>
+</body>
+</html>
